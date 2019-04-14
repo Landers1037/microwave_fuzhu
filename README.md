@@ -29,3 +29,20 @@ Sin,Sout()方法	求电路的输入输出反射系数
 ## 使用Pyqt进行图形化重构
 
 ## ![](./demo/demo.png)	
+
+## 快捷计算库实现
+
+简单的把计算步骤打包进了库里，库包含两个文件，用户输入.py和计算.py
+
+使用方法：
+
+```python
+import microwave_sci as mc
+#用户输入参数
+datas = mc.go(num) #传入参数为节点数
+#计算矩阵
+mc.Buding(num,datas) #传入参数节点数，参数列表
+#计算节点导纳矩阵
+mc.Yarray(Z) #参数Z为计算得到的不定导纳矩阵
+```
+
